@@ -1,4 +1,4 @@
-package me.dm7.barcodescanner.zxing.sample;
+package asia.ienter.qrscaner.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

@@ -1,4 +1,4 @@
-package me.dm7.barcodescanner.zxing.sample;
+package asia.ienter.qrscaner.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+
+import asia.ienter.qrscaner.R;
 
 public class CameraSelectorDialogFragment extends DialogFragment {
     public interface CameraSelectorDialogListener {

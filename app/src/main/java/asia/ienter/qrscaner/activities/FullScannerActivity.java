@@ -1,5 +1,6 @@
-package me.dm7.barcodescanner.zxing.sample;
+package asia.ienter.qrscaner.activities;
 
+import android.content.Intent;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -17,7 +18,12 @@ import com.google.zxing.Result;
 import java.util.ArrayList;
 import java.util.List;
 
+import asia.ienter.qrscaner.fragments.CameraSelectorDialogFragment;
+import asia.ienter.qrscaner.fragments.FormatSelectorDialogFragment;
+import asia.ienter.qrscaner.fragments.MessageDialogFragment;
+import asia.ienter.qrscaner.models.QRData;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
+import asia.ienter.qrscaner.R;
 
 public class FullScannerActivity extends BaseScannerActivity implements MessageDialogFragment.MessageDialogListener,
         ZXingScannerView.ResultHandler, FormatSelectorDialogFragment.FormatSelectorDialogListener,
@@ -145,12 +151,19 @@ public class FullScannerActivity extends BaseScannerActivity implements MessageD
             Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
             r.play();
         } catch (Exception e) {}
-        showMessageDialog("Contents = " + rawResult.getText() + ", Format = " + rawResult.getBarcodeFormat().toString());
+        QRData.qrData.addData(rawResult.getText());
+        showMessageDialog(rawResult.getText());
+
     }
 
     public void showMessageDialog(String message) {
-        DialogFragment fragment = MessageDialogFragment.newInstance("Scan Results", message, this);
+        DialogFragment fragment = MessageDialogFragment.newInstance("Kết quả quét mã ", message, this);
         fragment.show(getSupportFragmentManager(), "scan_results");
+    }
+
+    public void closeDialogMessageResult(){
+        closeDialog("scan_results");
+
     }
 
     public void closeMessageDialog() {
@@ -167,12 +180,14 @@ public class FullScannerActivity extends BaseScannerActivity implements MessageD
         if(fragment != null) {
             fragment.dismiss();
         }
+
     }
 
     @Override
     public void onDialogPositiveClick(DialogFragment dialog) {
         // Resume the camera
         mScannerView.resumeCameraPreview(this);
+        onBackPressed();
     }
 
     @Override

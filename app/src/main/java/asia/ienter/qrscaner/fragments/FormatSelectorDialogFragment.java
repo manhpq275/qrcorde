@@ -1,4 +1,4 @@
-package me.dm7.barcodescanner.zxing.sample;
+package asia.ienter.qrscaner.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,8 +11,9 @@ import com.google.zxing.BarcodeFormat;
 import java.util.ArrayList;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
+import asia.ienter.qrscaner.R;
 
-public class FormatSelectorDialogFragment extends DialogFragment {
+public class FormatSelectorDialogFragment  extends DialogFragment {
     public interface FormatSelectorDialogListener {
         public void onFormatsSaved(ArrayList<Integer> selectedIndices);
     }
@@ -92,4 +93,5 @@ public class FormatSelectorDialogFragment extends DialogFragment {
 
         return builder.create();
     }
+
 }

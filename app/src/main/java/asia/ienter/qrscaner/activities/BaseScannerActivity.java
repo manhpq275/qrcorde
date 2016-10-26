@@ -1,4 +1,4 @@
-package me.dm7.barcodescanner.zxing.sample;
+package asia.ienter.qrscaner.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;

@@ -1,15 +1,6 @@
 <resources>
-    <string name="app_name">ZXing Scanner Sample</string>
-    <string name="scanner_activity">ZXing Scanner - Full Activity</string>
-    <string name="scanner_fragment_activity">ZXing Scanner - Full Fragment Activity</string>
-    <string name="simple_scanner_activity">ZXing Scanner - Simple Activity</string>
-    <string name="custom_view_finder_scanner_activity">ZXing Scanner - Custom View Finder Activity</string>
-    <string name="scaling_scanner_activity">ZXing Scanner - Scaling Activity</string>
-    <string name="simple_scanner_fragment_activity">ZXing Scanner - Simple Fragment Activity</string>
-    <string name="full_screen_scanner_fragment_activity">ZXing Scanner - Full Screen Fragment Activity</string>
-    <string name="simple_activity_sample">Simple Activity Sample</string>
-    <string name="simple_fragment_sample">Simple Fragment Sample</string>
-    <string name="activity_sample">Full Activity Sample</string>
+    <string name="app_name">Demo App Scan QrCode</string>
+    <string name="scanner_activity">Full Activity</string>
     <string name="fragment_sample">Full Fragment Sample</string>
     <string name="full_screen_sample">Full Screen Fragment Sample</string>
     <string name="custom_view_finder_sample">Custom View Finder Sample</string>
@@ -25,4 +16,24 @@
     <string name="ok_button">OK</string>
     <string name="cancel_button">Cancel</string>
     <bool name="cameraPreviewShouldFillView">true</bool>
+
+
+
+    <string name="time_ago_prefix"></string>
+    <string name="time_ago_suffix"></string>
+    <string name="time_ago_seconds">1m</string>
+    <string name="time_ago_minute">1s</string>
+    <string name="time_ago_minutes">%dm</string>
+    <string name="time_ago_hour">1h</string>
+    <string name="time_ago_hours">%dh</string>
+    <string name="time_ago_day">1 ngày</string>
+    <string name="time_ago_days">ngày</string>
+    <string name="time_ago_week">1 tuần</string>
+    <string name="time_ago_weeks">tuần</string>
+    <string name="time_ago_month">30d</string>
+    <string name="time_ago_months">tháng</string>
+    <string name="time_ago_year">1 năm</string>
+    <string name="time_ago_years">năm</string>
+    <string name="time_minutes">phút</string>
+    <string name="time_ago_now">Vừa xong</string>
 </resources>
